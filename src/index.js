@@ -14,6 +14,9 @@ ready(function() {
       }
     }
     key = typeof key === 'string' ? key.toLowerCase() : key;
+    if(key === 'false') {
+      return
+    }
     avaliableShortcut = removeFromArray(avaliableShortcut, key);
     if (!shortcuts[key]) {
       shortcuts[key] = item.getAttribute('href');
